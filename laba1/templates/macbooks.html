@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}APPLE{% endblock %}
+    <a href ="/">Вернуться на главную</a>
+{% block content %}
+    <table>
+        <tr>
+            <td>Выберите Macbook, который хотите рассмотреть</td>
+        </tr>
+        {% for macbook in macbooks%}
+        <tr>
+            <td><a href="/catalog_macbooks/{{ macbook.id }}" >{{ macbook.name }}</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

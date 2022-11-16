@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}APPLE{% endblock %}
+    <a href ="/">Вернуться на главную</a>
+{% block content %}
+    <table>
+        <tr>
+            <td>Выберите Ipad, который хотите рассмотреть</td>
+        </tr>
+        {% for ipad in ipads%}
+        <tr>
+            <td><a href="/catalog_ipads/{{ ipad.id }}" > {{ ipad.name }}</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
